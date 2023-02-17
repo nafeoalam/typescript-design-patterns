@@ -1,5 +1,5 @@
 abstract class Coffee{
-    public description: string;
+    public description!: string;
 
     public getDescription() : string{
         return this.description;
@@ -9,7 +9,7 @@ abstract class Coffee{
 }
 
 abstract class CoffeeDecorator extends Coffee{
-    decoratedCoffee: Coffee;
+    decoratedCoffee!: Coffee;
     public abstract getDescription(): string;
 }
 

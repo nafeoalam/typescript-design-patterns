@@ -3,9 +3,9 @@ module test {
     interface State {
         order: Order;
 
-        cancelOrder();
-        verifyPayment();
-        shipOrder();
+        cancelOrder():void;
+        verifyPayment():void
+        shipOrder():void
     }
 
     class Order {
@@ -14,7 +14,7 @@ module test {
         public orderShipedState: State;
         public orderBeingPrepared: State;
 
-        public currentState: State;
+        public currentState!: State;
 
         constructor() {
             this.cancelledOrderState = new CancelledOrderState(this);

@@ -1,5 +1,5 @@
 abstract class Car{
-    public description: string;
+    public description!: string;
 
     public getDescription() : string{
         return this.description;
@@ -9,7 +9,7 @@ abstract class Car{
 }
 
 abstract class CarOptions extends Car{
-    decoratedCar: Car;
+    public decoratedCar!: Car;
     public abstract getDescription(): string;
 }
 
